@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Web Page 1</title>
+    <link rel="stylesheet" href="HTMLtags.CSS">
+    <script defer src="scripts.js"></script>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <div class="topPart" id="MyHeader">
+        <h1 class="titleofsite">Miscelanuous Music Info</h1>
+        <div class="flex-container">
+            <div><a href="#YT">Go to Youtube</a></div>
+            <div><a href="#audio">Go to Audio</a></div>
+            <div><a href="#">Go to Top</a></div>
+            <div><a href="#target">Go to Filedset</a></div>
+        </div>
+    </div>
+
+    <!-- Creators Info Section -->
+    <div class="creators" id="creators">
+        <header>
+            <h3>Created by Maximilian Tiriobo</h3>
+            <h4>Aided By James Feeney, Annastasia Williams</h4>
+        </header>
+    </div>
+
+    <!-- Main Content Section -->
+    <main>
+
+        <!-- Article 1: Introduction to Music -->
+        <section>
+            <article>
+                <h2 class="browntitle">Musica</h2>
+                <p>Who doesn't love music? Music is one of the many forms of art that people often find themselves hours upon hours perfecting and creating.</p>
+                <p>Regardless of who you are, someone who loves the feeling of action to someone who wishes to feel peaceful, we all have our own meanings and tastes in music.</p>
+            </article>
+        </section>
+
+        <!-- Article 2: Uses of Music -->
+        <section>
+            <h3 class="browntitle">Music can be used for many reasons such as:</h3>
+            <p>- To express the cultural standards of rhythm, melody, and harmony</p>
+            <p>- To aid in a dancing experience</p>
+            <p>- To have shows or movies express emotion and feeling</p>
+            <p>- Something for people to listen to for a feeling or emotion whenever they please</p>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <nav>
+                <a href="https://www.youtube.com/watch?v=WwYfyL9UC6g&t=2s">Link to RSBO</a>
+                <a href="https://www.britannica.com/art/music">Link to Music</a>
+            </nav>
+        </footer>
+
+        <!-- YouTube Embed Section -->
+        <section>
+            <aside id="YT">
+                <h3 class="browntitle">Example of Some really cool musica</h3>
+                <h5>Performed by the Royal Bangkok Symphony Orchestra (RSBO)</h5>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WwYfyL9UC6g?si=Mw8gOQM4ZXPJ77e2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </aside>
+        </section>
+
+        <!-- Image Section -->
+        <section>
+            <div id="mediaContainer">
+                <h1>Click an image to watch a video</h1>
+                <div class="carousel-container">
+                    <button id="leftArrow">Left</button>
+                    <div id="imageContainer" class="image-container">
+                        <!-- Media content will be dynamically added here -->
+                    </div>
+                    <button id="rightArrow">Right</button>
+                </div>
+        
+                <div id="videoContainer" style="display: none;">
+                    <video id="video" width="320" height="240" controls>
+                        <source id="videoSource" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section>
+            <div id="target" class="RSVP">
+                <fieldset>
+                    <legend>RSVP to listen to our cool band</legend>
+                    <legend>Enter your credentials:</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br><br>
+                    <label for="phone number">Home Phone:</label>
+                    <input type="text" id="number" name="number"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday"><br><br>
+                    <label for="A">Choose a Day You are available:</label>
+                    <select name="Days" id="A">
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option><br><br>
+                    </select>
+                </fieldset>
+            </div>
+        </section>
+
+        <!-- Concerns Section -->
+        <section>
+            <label for="box">Do you have any concerns we should know about? :</label>
+            <textarea id="box" name="words" rows="1" cols="15"></textarea><br>
+            <button onclick="dispTxt()">Submit</button>
+            <p id="output" class="output"></p>
+        </section>
+
+        <!-- Text Input Form -->
+        <section>
+            <form>
+                <label for="username">Type Some Text</label>
+                <input type="text" id="username" name="username">
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>

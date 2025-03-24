@@ -1,0 +1,271 @@
+/* Importing Lib for us to gain access to the different fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Where we have our colors list and what the roles of those colors are */
+:root {
+    --primary-color: #f7d9ab;
+    --secondary-color: #b094687e;
+    --accent-color: #e78f3c;
+    --background-color: #b09468;
+    --text-color: rgb(70, 43, 22);
+    --header-color: rgb(70, 43, 22);
+    --link-color: #064561;
+    --link-hover-color: #28738a;
+}
+
+.flex-container {
+    display: flex;
+    background-color: black;
+}
+
+.flex-container > div {
+    background-color: rgb(70, 43, 22);
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    color: black;
+}
+
+#target, #YT, #audio, #creators {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* General Body & Section Styles */
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-family: 'Georgia', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--header-color);
+    font-family: 'Pacifico', sans-serif;
+    padding: 15px 0;
+    text-align: center;
+    text-shadow: 2px 2px 5px black; /* shadow on header */
+    line-height: 12px;
+}
+
+.titleofsite {
+    text-shadow: 2px 2px 5px #6d6d6d; /* light gray shadow */
+}
+
+.browntitle {
+    text-shadow: 2px 2px 5px var(--primary-color);
+}
+
+.whiteshadow {
+    text-shadow: 2px 2px 5px white;
+}
+
+.topPart {
+    position: sticky;
+    top: 0;
+    padding: 10px 16px;
+    background: rgb(90, 59, 14);
+    color: #000000;
+    width: 96.8vw;
+    left: 0;
+    z-index: 10;
+}
+
+.creators {
+    color: rgb(141, 120, 66);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pacifico', sans-serif;
+    padding: 5px 0;
+    text-align: center;
+}
+
+p {
+    color: var(--text-color);
+    font-family: 'Georgia', sans-serif;
+    text-align: center;
+}
+
+p.output {
+    color: var(--text-color, black);
+    text-align: left;
+    font-family: verdana;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+.topPart {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 2px -2px gray;
+    width: 100%;
+}
+
+nav {
+    top: 0;
+    background-color: #333;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 2px -2px gray;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+section {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Georgia', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+footer {
+    color: var(--text-color);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    height: auto;
+    border: 5px solid #333;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+img:hover {
+    transform: scale(1.1); /* Scale the image by 10% */
+}
+
+/* New CSS for Image Carousel */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.carousel-media {
+    display: none;
+}
+
+.carousel-media.active {
+    display: block;
+}
+
+#leftArrow, #rightArrow {
+    font-size: 2em;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide images that are out of bounds */
+    position: relative;
+}
+
+#imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#videoContainer {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#videoContainer.playing {
+    display: block;
+}
+
+#videoContainer video {
+    width: 320px;
+    height: 240px;
+    width: 50%;
+    height: auto;
+}
+
+#imageContainer img {
+    display: none; /* Hide all images by default */
+    width: 50%;   /* Make images responsive */
+    height: auto;  /* Maintain aspect ratio */
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out; /* Fade transition when switching images */
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer; /* Make image clickable */
+}
+
+/* Ensure only the current image is visible */
+#imageContainer img.active {
+    opacity: 1;
+    visibility: visible;
+    display: block; /* Only display the active image */
+}
+
+#imageContainer img:not(.active) {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+/* Ensure the image container is flexible */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide images that are out of bounds */
+    position: relative;
+}
+

@@ -1,0 +1,25 @@
+{
+  "myDiffVideos": [
+    {
+      "type": "image",
+      "src": "images/NotMyTempo.png",
+      "alt": "Tempo01 -- Max's Video",
+      "srcset": "images/NotMyTempo.png 600w",
+      "videoSrc": "videos/Video_Update.mp4"
+    },
+    {
+      "type": "image",
+      "src": "images/QuiteMyTempo.jpg",
+      "alt": "Tempo02 -- My Halo Musica",
+      "srcset": "images/QuiteMyTempo.jpg 600w",
+      "videoSrc": "videos/Halo_CE_Epic.mp4"
+    },
+    {
+      "type": "image",
+      "src": "images/TheTempo.jpg",
+      "alt": "Tempo03 -- Duel of the Fates",
+      "srcset": "images/TheTempo.jpg 600w",
+      "videoSrc": "videos/Star_Wars_Epic.mp4"
+    }
+  ]
+}
