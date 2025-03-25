@@ -1,7 +1,9 @@
-/* Importing Lib for us to gain access to the different fonts */
+/* Importing Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-/* Where we have our colors list and what the roles of those colors are */
+/* --------------------------------------------------------------
+  Global Colors
+-------------------------------------------------------------- */
 :root {
     --primary-color: #f7d9ab;
     --secondary-color: #b094687e;
@@ -13,31 +15,9 @@
     --link-hover-color: #28738a;
 }
 
-.flex-container {
-    display: flex;
-    background-color: black;
-}
-
-.flex-container > div {
-    background-color: rgb(70, 43, 22);
-    margin: 10px;
-    padding: 20px;
-    font-size: 30px;
-    color: black;
-}
-
-#target, #YT, #audio, #creators {
-    padding: 20px;
-    border-radius: 8px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* General Body & Section Styles */
+/* --------------------------------------------------------------
+  General Body & Section Styles
+-------------------------------------------------------------- */
 body {
     background-color: var(--secondary-color);
     color: var(--text-color);
@@ -46,6 +26,17 @@ body {
     line-height: 1.6;
 }
 
+section {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Georgia', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------
+  Header Styles
+-------------------------------------------------------------- */
 header {
     background-color: var(--header-color);
     font-family: 'Pacifico', sans-serif;
@@ -55,11 +46,7 @@ header {
     line-height: 12px;
 }
 
-.titleofsite {
-    text-shadow: 2px 2px 5px #6d6d6d; /* light gray shadow */
-}
-
-.browntitle {
+.titleofsite, .browntitle {
     text-shadow: 2px 2px 5px var(--primary-color);
 }
 
@@ -67,17 +54,55 @@ header {
     text-shadow: 2px 2px 5px white;
 }
 
+/* --------------------------------------------------------------
+  Top Navigation Bar
+-------------------------------------------------------------- */
 .topPart {
     position: sticky;
     top: 0;
-    padding: 10px 16px;
-    background: rgb(90, 59, 14);
-    color: #000000;
-    width: 96.8vw;
-    left: 0;
-    z-index: 10;
+    background-color: #333;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 2px -2px gray;
+    width: 100%;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 2px -2px gray;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------
+  Creators Section Styles
+-------------------------------------------------------------- */
 .creators {
     color: rgb(141, 120, 66);
 }
@@ -109,64 +134,34 @@ a:hover {
     color: var(--link-hover-color);
 }
 
-.topPart {
-    position: sticky;
-    top: 0;
-    background-color: #333;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    box-shadow: 0 4px 2px -2px gray;
-    width: 100%;
-}
-
-nav {
-    top: 0;
-    background-color: #333;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    box-shadow: 0 4px 2px -2px gray;
-    width: 100%;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.1em;
+/* --------------------------------------------------------------
+  Buttons & Interactive Elements
+-------------------------------------------------------------- */
+button {
     padding: 10px 20px;
-    transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #555;
-    border-radius: 5px;
-}
-
-nav button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1em;
+    font-size: 16px;
     cursor: pointer;
 }
 
-section {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: 'Georgia', sans-serif;
+.collapsible {
+    background-color: #4CAF50;  /* Green color */
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    width: 100px;
     font-size: 16px;
-    line-height: 1.6;
+    margin: 20px auto;
 }
 
-footer {
-    color: var(--text-color);
+.collapsible:hover {
+    background-color: #45a049;
 }
 
+/* --------------------------------------------------------------
+  Image Styles
+-------------------------------------------------------------- */
 img {
     display: block;
     margin: 0 auto;
@@ -182,7 +177,9 @@ img:hover {
     transform: scale(1.1); /* Scale the image by 10% */
 }
 
-/* New CSS for Image Carousel */
+/* --------------------------------------------------------------
+  Carousel Styles
+-------------------------------------------------------------- */
 .carousel-container {
     display: flex;
     justify-content: center;
@@ -213,6 +210,9 @@ img:hover {
     position: relative;
 }
 
+/* --------------------------------------------------------------
+  Image Container Specific Styles
+-------------------------------------------------------------- */
 #imageContainer {
     display: flex;
     justify-content: center;
@@ -220,10 +220,37 @@ img:hover {
     position: relative;
 }
 
+#imageContainer img {
+    display: none; /* Hide all images by default */
+    width: 50%;   /* Make images responsive */
+    height: auto;  /* Maintain aspect ratio */
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out; /* Fade transition when switching images */
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Show only the active image */
+#imageContainer img.active {
+    opacity: 1;
+    visibility: visible;
+    display: block; /* Only display the active image */
+}
+
+#imageContainer img:not(.active) {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+/* --------------------------------------------------------------
+  Video Container Styles
+-------------------------------------------------------------- */
 #videoContainer {
     display: none;
     margin-top: 20px;
     text-align: center;
+    transition: visibility 0.5s ease;
 }
 
 #videoContainer.playing {
@@ -237,35 +264,30 @@ img:hover {
     height: auto;
 }
 
-#imageContainer img {
-    display: none; /* Hide all images by default */
-    width: 50%;   /* Make images responsive */
-    height: auto;  /* Maintain aspect ratio */
-    cursor: pointer;
-    transition: opacity 0.5s ease-in-out; /* Fade transition when switching images */
-    opacity: 0;
-    visibility: hidden;
-    cursor: pointer; /* Make image clickable */
-}
-
-/* Ensure only the current image is visible */
-#imageContainer img.active {
-    opacity: 1;
-    visibility: visible;
-    display: block; /* Only display the active image */
-}
-
-#imageContainer img:not(.active) {
-    opacity: 0;
-    visibility: hidden;
-    display: none;
-}
-/* Ensure the image container is flexible */
-.image-container {
+/* --------------------------------------------------------------
+  Layout for Flexbox Containers
+-------------------------------------------------------------- */
+.flex-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Hide images that are out of bounds */
-    position: relative;
+    background-color: black;
 }
 
+.flex-container > div {
+    background-color: rgb(70, 43, 22);
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    color: black;
+}
+
+#target, #YT, #audio, #creators {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* --------------------------------------------------------------
+  Footer Styles
+-------------------------------------------------------------- */
+footer {
+    color: var(--text-color);
+}

@@ -70,18 +70,27 @@
         </section>
 
         <!-- Image Section -->
-        <section>
+        <section id="mediaSection">
             <div id="mediaContainer">
-                <h1>Click an image to watch a video</h1>
+                <h1>Click an image to watch/listen to a video</h1>
+                
+                <!-- Video toggle button -->
+                <button id="toggleVideoButton" class="collapsible">Show Video</button>
+                
+                <!-- Carousel container for images and navigation buttons -->
                 <div class="carousel-container">
-                    <button id="leftArrow">Left</button>
+                    <button id="leftArrow" class="carousel-arrow">Left</button>
+                    
+                    <!-- Image container, images will be dynamically added here -->
                     <div id="imageContainer" class="image-container">
-                        <!-- Media content will be dynamically added here -->
+                        <!-- Media content will be dynamically loaded here -->
                     </div>
-                    <button id="rightArrow">Right</button>
+                    
+                    <button id="rightArrow" class="carousel-arrow">Right</button>
                 </div>
         
-                <div id="videoContainer" style="display: none;">
+                <!-- Video container (Initially hidden) -->
+                <div id="videoContainer" class="video-container" style="display: none;">
                     <video id="video" width="320" height="240" controls>
                         <source id="videoSource" type="video/mp4">
                         Your browser does not support the video tag.
