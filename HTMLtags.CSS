@@ -204,6 +204,17 @@ img:hover {
 }
 
 /* --------------------------------------------------------------
+  Youtube Styles
+-------------------------------------------------------------- */
+#YT {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Ensures vertical centering */
+    text-align: center; /* Centers text content */
+}
+
+/* --------------------------------------------------------------
   Carousel Styles
 -------------------------------------------------------------- */
 .carousel-container {
