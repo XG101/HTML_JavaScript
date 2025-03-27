@@ -1,8 +1,4 @@
 //This is from Max's Code for forms
-    function dispTxt(){
-        document.getElementById("output").textContent = "Recieved, Thank You for filling out the form."
-    }
-
     function playdrums(){
         document.getElementById("badum").play();
     }
@@ -176,3 +172,64 @@ function toggleDropdown(){
     toggleCheck = false;
   }
 }
+
+
+localStorage.setItem("username", "MaxTiriobo");
+let username = localStorage.getItem("username");
+console.log(username); 
+localStorage.removeItem("username");
+
+let ignoreCount = localStorage.getItem('ignoreCount') ? parseInt(localStorage.getItem('ignoreCount')) : 0;
+let messages = [];
+
+
+fetch("media.JSON")
+    .then(response => response.json())
+    .then(data => {
+        messages = data.stages;
+    })
+    .catch(error => console.error("error loading .JSON file", error));
+
+function isEmpty(id) {
+    let input = document.getElementById(id)
+    if (input.value.trim() == "") {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+
+
+function dispTxt() {
+    if (isEmpty("name") || isEmpty("number") || isEmpty("email")) {
+        if (messages.length > 0) {
+            if (ignoreCount < messages.length) {
+                document.getElementById("output").textContent = messages[ignoreCount].message;
+                ignoreCount++
+                localStorage.setItem('ignoreCount', ignoreCount)
+            }
+            else {
+                ignoreCount = 0;
+                document.getElementById("output").textContent = messages[ignoreCount].message
+                ignoreCount ++;
+                localStorage.setItem('ignoreCount', ignoreCount);
+            }
+        }
+        else {
+            // ignoreCount++
+            document.getElementById("output").textContent = "messages not loaded";
+        }
+
+    }
+    else {
+        document.getElementById("output").textContent = "Recieved, Thank You for filling out the form.";
+        ignoreCount = 0;
+        localStorage.setItem('ignoreCount', ignoreCount);
+    }
+}
+
+
+
+

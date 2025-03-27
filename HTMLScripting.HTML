@@ -38,15 +38,18 @@
         <section>
             <article>
                 <h2 class="browntitle" id="heading1" onmouseover="changeTitle()" onmouseout="changeBack()">Musica</h2>
-                <p>Who doesn't love music? Music is one of the many forms of art that people often find themselves hours upon hours perfecting and creating.</p>
-                <p>Regardless of who you are, someone who loves the feeling of action to someone who wishes to feel peaceful, we all have our own meanings and tastes in music.</p>
+                <p>Who doesn't love music? Music is one of the many forms of art that people often find themselves hours
+                    upon hours perfecting and creating.</p>
+                <p>Regardless of who you are, someone who loves the feeling of action to someone who wishes to feel
+                    peaceful, we all have our own meanings and tastes in music.</p>
             </article>
             <button id="changer" onclick="changeText()">Click to Change Text</button>
         </section>
 
         <!-- Article 2: Uses of Music -->
         <section>
-            <h3 class="browntitle" id="heading2" onclick="toggleDropdown()" onmouseover="changeTitle2()" onmouseout="changeBack2()">Music can be used for many reasons</h3>
+            <h3 class="browntitle" id="heading2" onclick="toggleDropdown()" onmouseover="changeTitle2()"
+                onmouseout="changeBack2()">Music can be used for many reasons</h3>
             <p id="dropdown1"> </p>
             <p id="dropdown2"> </p>
             <p id="dropdown3"> </p>
@@ -66,7 +69,10 @@
             <aside id="YT">
                 <h3 class="browntitle">Example of Some really cool musica</h3>
                 <h5>Performed by the Royal Bangkok Symphony Orchestra (RSBO)</h5>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/WwYfyL9UC6g?si=Mw8gOQM4ZXPJ77e2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WwYfyL9UC6g?si=Mw8gOQM4ZXPJ77e2"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </aside>
         </section>
 
@@ -74,22 +80,22 @@
         <section id="mediaSection">
             <div id="mediaContainer">
                 <h1>Click an image to watch/listen to a video</h1>
-                
+
                 <!-- Video toggle button -->
                 <button id="toggleVideoButton" class="collapsible">Show Video</button>
-                
+
                 <!-- Carousel container for images and navigation buttons -->
                 <div class="carousel-container">
                     <button id="leftArrow" class="carousel-arrow">Left</button>
-                    
+
                     <!-- Image container, images will be dynamically added here -->
                     <div id="imageContainer" class="image-container">
                         <!-- Media content will be dynamically loaded here -->
                     </div>
-                    
+
                     <button id="rightArrow" class="carousel-arrow">Right</button>
                 </div>
-        
+
                 <!-- Video container (Initially hidden) -->
                 <div id="videoContainer" class="video-container" style="display: none;">
                     <video id="video" width="320" height="240" controls>
@@ -131,16 +137,17 @@
             <label for="box">Do you have any concerns we should know about? :</label>
             <textarea id="box" name="words" rows="1" cols="15"></textarea><br>
             <button onclick="dispTxt()">Submit</button>
+            
+
+
+            <!-- Text Input Form -->
+            <!-- <button class="output">Submit</button> -->
             <p id="output" class="output"></p>
         </section>
 
-        <!-- Text Input Form -->
-        <section>
-            <form>
-                <label for="username">Type Some Text</label>
-                <input type="text" id="username" name="username">
-            </form>
-        </section>
+        <footer>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+        </footer>
     </main>
 
 </body>
