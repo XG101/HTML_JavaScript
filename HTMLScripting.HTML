@@ -37,19 +37,20 @@
         <!-- Article 1: Introduction to Music -->
         <section>
             <article>
-                <h2 class="browntitle">Musica</h2>
+                <h2 class="browntitle" id="heading1" onmouseover="changeTitle()" onmouseout="changeBack()">Musica</h2>
                 <p>Who doesn't love music? Music is one of the many forms of art that people often find themselves hours upon hours perfecting and creating.</p>
                 <p>Regardless of who you are, someone who loves the feeling of action to someone who wishes to feel peaceful, we all have our own meanings and tastes in music.</p>
             </article>
+            <button id="changer" onclick="changeText()">Click to Change Text</button>
         </section>
 
         <!-- Article 2: Uses of Music -->
         <section>
-            <h3 class="browntitle">Music can be used for many reasons such as:</h3>
-            <p>- To express the cultural standards of rhythm, melody, and harmony</p>
-            <p>- To aid in a dancing experience</p>
-            <p>- To have shows or movies express emotion and feeling</p>
-            <p>- Something for people to listen to for a feeling or emotion whenever they please</p>
+            <h3 class="browntitle" id="heading2" onclick="toggleDropdown()" onmouseover="changeTitle2()" onmouseout="changeBack2()">Music can be used for many reasons</h3>
+            <p id="dropdown1"> </p>
+            <p id="dropdown2"> </p>
+            <p id="dropdown3"> </p>
+            <p id="dropdown4"> </p>
         </section>
 
         <!-- Footer Section -->

@@ -141,4 +141,38 @@
                 console.error('Error loading media.json:', error);
             });
     });
-    
+
+//Anastasia'a code
+function changeTitle() {
+    document.getElementById("heading1").innerText = "Music";
+}
+function changeBack() {
+    document.getElementById("heading1").innerText = "Musica";
+}
+function changeTitle2() {
+    document.getElementById("heading2").innerText = "Click Me!";
+}
+function changeBack2() {
+    document.getElementById("heading2").innerText = "Music can be used for many reasons";
+}
+function changeText() {
+    document.getElementById("changer").innerText = "I love music!";
+}
+
+let toggleCheck = false;
+function toggleDropdown(){
+  if (toggleCheck == false){
+    document.getElementById("dropdown1").innerHTML = "-To express the cultural standards of rythm, melody, and harmony";
+    document.getElementById("dropdown2").innerHTML = "-To aid in a dancing experience";
+    document.getElementById("dropdown3").innerHTML = "-To have shows or movies express emotion and feeling";
+    document.getElementById("dropdown4").innerHTML = "-Something for people to listen for a feeling or emotion whenever they please";
+    toggleCheck = true;
+  }
+  else if(toggleCheck == true){
+    document.getElementById("dropdown1").innerHTML = "";
+    document.getElementById("dropdown2").innerHTML = "";
+    document.getElementById("dropdown3").innerHTML = "";
+    document.getElementById("dropdown4").innerHTML = "";
+    toggleCheck = false;
+  }
+}
