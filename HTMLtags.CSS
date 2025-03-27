@@ -98,6 +98,7 @@ nav button {
     color: white;
     font-size: 1em;
     cursor: pointer;
+
 }
 
 /* --------------------------------------------------------------
@@ -141,6 +142,9 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: auto;
 }
 
 .collapsible {
@@ -184,8 +188,8 @@ img:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; /* Ensures vertical centering */
-    text-align: center; /* Centers text content */
+    flex-direction: column; 
+    text-align: center;
 }
 
 /* --------------------------------------------------------------
