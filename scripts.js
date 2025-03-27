@@ -154,7 +154,7 @@ function changeBack2() {
 function changeText() {
     document.getElementById("changer").innerText = "I love music!";
 }
-
+//hidden text toggle
 let toggleCheck = false;
 function toggleDropdown(){
   if (toggleCheck == false){
@@ -172,6 +172,11 @@ function toggleDropdown(){
     toggleCheck = false;
   }
 }
+//scroll to top
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  } 
 
 
 localStorage.setItem("username", "MaxTiriobo");
@@ -229,7 +234,3 @@ function dispTxt() {
         localStorage.setItem('ignoreCount', ignoreCount);
     }
 }
-
-
-
-
