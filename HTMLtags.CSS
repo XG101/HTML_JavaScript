@@ -188,6 +188,17 @@ button {
 .btn1 {
     margin: 0% 45% auto;
 }
+#video_volume {
+    /* -webkit-appearance: none; */
+    appearance: none;
+    width: 30%;
+    height: 10px;
+    background: white;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background-color: black;
+}
 
 /* --------------------------------------------------------------
   Image Styles
