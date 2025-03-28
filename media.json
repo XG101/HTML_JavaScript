@@ -1,39 +1,54 @@
 {
-  "myDiffVideos": [
-    {
-      "type": "image",
-      "src": "images/NotMyTempo.png",
-      "alt": "Tempo01 -- Max's Video",
-      "srcset": "images/NotMyTempo.png 600w",
-      "videoSrc": "videos/Video_Update.mp4"
-    },
-    {
-      "type": "image",
-      "src": "images/QuiteMyTempo.jpg",
-      "alt": "Tempo02 -- My Halo Musica",
-      "srcset": "images/QuiteMyTempo.jpg 600w",
-      "videoSrc": "videos/Halo_CE_Epic.mp4"
-    },
-    {
-      "type": "image",
-      "src": "images/TheTempo.jpg",
-      "alt": "Tempo03 -- Duel of the Fates",
-      "srcset": "images/TheTempo.jpg 600w",
-      "videoSrc": "videos/Star_Wars_Epic.mp4"
-    }
-  ],
-  "stages": [
-    {
-      "level": 1,
-      "message": "Please fill in the required fields"
-    },
-    {
-      "level": 2,
-      "message": "The credentials are empty, please fill them out"
-    },
-    {
-      "level": 3,
-      "message": "There is nothing in the boxes above"
-    }
-  ]
+    "myDiffVideos": 
+    [
+        {
+            "type": "image",
+            "src": "images/NotMyTempo.png",
+            "alt": "Tempo01 -- Max's Video",
+            "srcset": "images/NotMyTempo.png 600w",
+            "videoSrc": "videos/Video_Update.mp4",
+            "captions": [
+              {"start": 0, "end": 5, "text": "This is the intro to Max's video."},
+              {"start": 6, "end": 10, "text": "Let's learn about the tempo."},
+              {"start": 11, "end": 15, "text": "Next, we explore more advanced concepts."}
+            ]
+          },
+          {
+            "type": "image",
+            "src": "images/QuiteMyTempo.jpg",
+            "alt": "Tempo02 -- My Halo Musica",
+            "srcset": "images/QuiteMyTempo.jpg 600w",
+            "videoSrc": "videos/Halo_CE_Epic.mp4",
+            "captions": [
+              {"start": 0, "end": 5, "text": "Welcome to the Halo soundtrack."},
+              {"start": 6, "end": 10, "text": "Here’s an epic Halo moment!"}
+            ]
+          },
+          {
+            "type": "image",
+            "src": "images/TheTempo.jpg",
+            "alt": "Tempo03 -- Duel of the Fates",
+            "srcset": "images/TheTempo.jpg 600w",
+            "videoSrc": "videos/Star_Wars_Epic.mp4",
+            "captions": [
+              {"start": 0, "end": 5, "text": "Prepare for the Duel of the Fates."},
+              {"start": 6, "end": 10, "text": "The epic battle is just beginning."}
+            ]
+          }
+    ],
+    "stages": 
+    [
+        {
+            "level": 1,
+            "message": "Please fill in the required fields"
+        },
+        {
+            "level": 2,
+            "message": "The credentials are empty, please fill them out"
+        },
+        {
+            "level": 3,
+            "message": "There is nothing in the boxes above"
+        }
+    ]
 }

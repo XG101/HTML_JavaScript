@@ -22,7 +22,7 @@ function toggleMute() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    let currentIndex = localStorage.getItem('currentIndex') ? parseInt(localStorage.getItem('currentIndex')) : 0; // Get saved index from localStorage, default to 0 if not found
+    let currentIndex = localStorage.getItem('currentIndex') ? parseInt(localStorage.getItem('currentIndex')) : 0;
     let videoElement = document.getElementById("video");
     let videoContainer = document.getElementById("videoContainer");
     let mediaContainer = document.getElementById("imageContainer");
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     // Event listener for clicking an image
                     mediaElement.addEventListener("click", () => {
-                        showVideo(item.videoSrc, index); // Show the corresponding video
+                        showVideo(item.videoSrc, item.captions); // Correct function call with videoSrc and captions
                         localStorage.setItem('currentIndex', index); // Save the index of the image in localStorage
                     });
 
@@ -80,13 +80,13 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             // Function to show video based on the image clicked
-            function showVideo(videoSrc, index) {
+            function showVideo(videoSrc, captions) {
                 // Hide images
                 const allImages = document.querySelectorAll("#imageContainer img");
                 allImages.forEach(img => img.classList.remove("active"));
 
                 // Show the clicked image
-                const clickedImage = allImages[index];
+                const clickedImage = allImages[currentIndex]; // Use the correct currentIndex
                 clickedImage.classList.add("active");
 
                 // Set the video source and make sure the video plays in the background
@@ -94,8 +94,32 @@ document.addEventListener("DOMContentLoaded", function () {
                 videoElement.load();
                 videoElement.play();
 
-                // Show the video container (without making it visible to the user)
-                videoContainer.style.display = "block"; // Show video container
+                // Show the video container
+                videoContainer.style.display = "block";
+
+                // Handle captions
+                handleCaptions(videoElement, captions);
+            }
+
+            // Function to handle captions display based on video time
+            function handleCaptions(videoElement, captions) {
+                const captionContainer = document.getElementById("captionContainer");
+                captionContainer.innerHTML = ''; // Clear previous captions
+
+                // Track caption display based on video time
+                videoElement.ontimeupdate = function () {
+                    const currentTime = videoElement.currentTime;
+
+                    // Find the caption that matches the current time
+                    const activeCaption = captions.find(caption => currentTime >= caption.start && currentTime <= caption.end);
+
+                    // Display the caption if there's an active one
+                    if (activeCaption) {
+                        captionContainer.textContent = activeCaption.text;
+                    } else {
+                        captionContainer.textContent = ''; // Clear if no caption is active
+                    }
+                };
             }
 
             // Function to update the carousel and show the correct image
