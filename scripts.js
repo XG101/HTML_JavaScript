@@ -190,10 +190,8 @@ function toggleDropdown() {
 function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-<<<<<<< HEAD
 }
-=======
-  } 
+
 //nav link highlighting
   // Get all sections that have an ID defined
 const sections = document.querySelectorAll("section[id]");
@@ -228,7 +226,6 @@ function navHighlighter() {
 }
 
 //
->>>>>>> 0f0887117a0fc087f911e2983e9d2014ba9255b2
 
 //Maximilian Tiriobo's code
 localStorage.setItem("username", "MaxTiriobo");
