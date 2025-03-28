@@ -268,7 +268,7 @@ let ignoreCount = localStorage.getItem('ignoreCount') ? parseInt(localStorage.ge
 let messages = [];
 
 
-fetch("media.JSON")
+fetch("media.json")
     .then(response => response.json())
     .then(data => {
         messages = data.stages;
