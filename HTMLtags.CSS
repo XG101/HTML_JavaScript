@@ -173,7 +173,7 @@ button {
 }
 
 .collapsible {
-    background-color: #4CAF50;  /* Green color */
+    background-color: #000000;  /* Green color */
     color: white;
     cursor: pointer;
     padding: 10px;
@@ -185,22 +185,11 @@ button {
 }
 
 .collapsible:hover {
-    background-color: #45a049;
+    background-color: #ffffff;
 }
 
 .btn1 {
     margin: 0% 45% auto;
-}
-#video_volume {
-    /* -webkit-appearance: none; */
-    appearance: none;
-    width: 30%;
-    height: 10px;
-    background: white;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-    background-color: black;
 }
 
 /* --------------------------------------------------------------

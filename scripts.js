@@ -152,6 +152,13 @@ button.addEventListener("click", () => {
     }
 });
 
+//video volume
+const slider = document.getElementById("video_volume");
+
+video_volume.addEventListener("input", () => {
+    video.volume = slider.value;
+})
+
 //Anastasia'a code
 function changeTitle() {
     document.getElementById("heading1").innerText = "Music";
