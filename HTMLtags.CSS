@@ -99,6 +99,9 @@ nav button {
     font-size: 1em;
     cursor: pointer;
 }
+.active {
+    color: black; 
+  }
 
 /* --------------------------------------------------------------
   got to top button styling
